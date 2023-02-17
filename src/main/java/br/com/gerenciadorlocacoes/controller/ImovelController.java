@@ -1,22 +1,30 @@
 package br.com.gerenciadorlocacoes.controller;
+import java.util.List;
+
 import br.com.gerenciadorlocacoes.domain.Imovel;
 import br.com.gerenciadorlocacoes.service.ImovelService;
 
 public class ImovelController {
 
-    private ImovelService imovelService;
+    private final ImovelService imovelService;
 
-    public void setImovelService(ImovelService imovelService) {
+    public ImovelController(ImovelService imovelService) {
         this.imovelService = imovelService;
     }
 
-    public ImovelService getImovelService() {
-        return imovelService;
+    public void criarImovel(Imovel imovel){
+        imovelService.criarImovel(imovel);
     }
-
-    void criarImovel(Imovel imovel){}
-    void editarImovel(Imovel imovel){}
-    void removerImovel(Imovel imovel){}
-    void listarImoveis(){}
-    void listarimovel(int id){}
+    public void editarImovel(Imovel imovel){
+        imovelService.editarImovel(imovel);
+    }
+    public void removerImovel(Imovel imovel){
+        imovelService.removerImovel(imovel);
+    }
+    public List<Imovel> listarImoveis(){
+        return imovelService.listarImoveis();
+    }
+    public Imovel listarimovel(int id){
+        return imovelService.listarimovel(id);
+    }
 }

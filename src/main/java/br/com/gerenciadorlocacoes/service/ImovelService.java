@@ -1,11 +1,13 @@
 package br.com.gerenciadorlocacoes.service;
+import java.util.List;
+
 import br.com.gerenciadorlocacoes.domain.Imovel;
 
-public interface InterfaceImovelService {
+public interface ImovelService {
 
     void criarImovel(Imovel imovel);
     void editarImovel(Imovel imovel);
     void removerImovel(Imovel imovel);
-    void listarImoveis(Imovel imovel);
-    void listarimovel(int id);
+    List<Imovel> listarImoveis();
+    Imovel listarimovel(int id);
 }

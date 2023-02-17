@@ -1,7 +1,7 @@
 package br.com.gerenciadorlocacoes.repository;
 import br.com.gerenciadorlocacoes.entity.ImovelEntity;
 
-public interface InterfaceImovelRepository {
+public interface ImovelRepository {
 
     void criarImovel(ImovelEntity imovel);
     void editarImovel(ImovelEntity imovel);

@@ -1,22 +1,42 @@
 package br.com.gerenciadorlocacoes.service;
+import java.util.List;
+
 import br.com.gerenciadorlocacoes.domain.Imovel;
 import br.com.gerenciadorlocacoes.repository.ImovelRepository;
 
-public class ImovelService {
+public class ImovelServiceImpl implements ImovelService {
 
-    private ImovelRepository imovelRepository;
+    private final ImovelRepository imovelRepository;
 
-    public void setImovelRepository(ImovelRepository imovelRepository) {
+
+    public ImovelServiceImpl(ImovelRepository imovelRepository) {
         this.imovelRepository = imovelRepository;
     }
 
-    public ImovelRepository getImovelRepository() {
-        return imovelRepository;
+    @Override
+    public void criarImovel(Imovel imovel) {
+
     }
 
-    void criarImovel(Imovel imovel){}
-    void editarImovel(Imovel imovel){}
-    void removerImovel(){}
-    void listarImoveis(){}
-    void listarimovel(int id){}
+    @Override
+    public void editarImovel(Imovel imovel) {
+
+    }
+
+    @Override
+    public void removerImovel(Imovel imovel) {
+
+    }
+
+    @Override
+    public List<Imovel> listarImoveis() {
+
+        return null;
+    }
+
+    @Override
+    public Imovel listarimovel(int id) {
+
+        return null;
+    }
 }
