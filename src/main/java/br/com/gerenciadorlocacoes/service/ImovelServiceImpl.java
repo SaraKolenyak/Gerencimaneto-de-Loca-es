@@ -8,7 +8,6 @@ public class ImovelServiceImpl implements ImovelService {
 
     private final ImovelRepository imovelRepository;
 
-
     public ImovelServiceImpl(ImovelRepository imovelRepository) {
         this.imovelRepository = imovelRepository;
     }

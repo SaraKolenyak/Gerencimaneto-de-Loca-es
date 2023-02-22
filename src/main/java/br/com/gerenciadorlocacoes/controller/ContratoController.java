@@ -2,21 +2,29 @@ package br.com.gerenciadorlocacoes.controller;
 import br.com.gerenciadorlocacoes.domain.Contrato;
 import br.com.gerenciadorlocacoes.service.ContratoService;
 
+import java.util.List;
+
 public class ContratoController {
 
-    private ContratoService contratoService;
+    private final ContratoService contratoService;
 
-    public void setContratoService(ContratoService contratoService) {
+    public ContratoController(ContratoService contratoService) {
         this.contratoService = contratoService;
     }
 
-    public ContratoService getContratoService() {
-        return contratoService;
+    public void criarContrato (Contrato contrato){
+        contratoService.criarContrato(contrato);
     }
-
-    void criarContrato (Contrato contrato){}
-    void editarContrato (Contrato contrato){}
-    void removerContrato (Contrato contrato){}
-    void listarContrato(){}
-    void listarContrato(int id){}
+    public void editarContrato (Contrato contrato){
+        contratoService.editarContrato(contrato);
+    }
+    public void removerContrato (Contrato contrato){
+        contratoService.removerContrato(contrato);
+    }
+    public List<Contrato> listarContratos(){
+        return contratoService.listarContratos();
+    }
+    public Contrato listarContrato(int id){
+        return contratoService.listarContrato(id);
+    }
 }

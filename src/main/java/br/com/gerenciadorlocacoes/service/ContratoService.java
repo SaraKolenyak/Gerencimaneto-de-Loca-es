@@ -1,22 +1,14 @@
 package br.com.gerenciadorlocacoes.service;
+
 import br.com.gerenciadorlocacoes.domain.Contrato;
-import br.com.gerenciadorlocacoes.repository.ContratoRepository;
+import java.util.List;
 
-public class ContratoService {
+public interface ContratoService {
 
-    private ContratoRepository contratoRepository;
+    void criarContrato (Contrato contrato);
+    void editarContrato (Contrato contrato);
+    void removerContrato (Contrato contrato);
+    List<Contrato> listarContratos();
+    Contrato listarContrato(int id);
 
-    public void setContratoRepository(ContratoRepository contratoRepository) {
-        this.contratoRepository = contratoRepository;
-    }
-
-    public ContratoRepository getContratoRepository() {
-        return contratoRepository;
-    }
-
-    void criarContrato (Contrato contrato){}
-    void editarContrato (Contrato contrato){}
-    void removerContrato (Contrato contrato){}
-    void listarContrato(){}
-    void listarContrato(int id){}
 }

@@ -1,23 +1,13 @@
 package br.com.gerenciadorlocacoes.service;
+
 import br.com.gerenciadorlocacoes.domain.Locatario;
-import br.com.gerenciadorlocacoes.repository.LocatarioRepository;
+import java.util.List;
 
-public class LocatarioService {
+public interface LocatarioService {
 
-    private LocatarioRepository locatarioRepository;
-
-    public void setLocatarioRepository(LocatarioRepository locatarioRepository) {
-        this.locatarioRepository = locatarioRepository;
-    }
-
-    public LocatarioRepository getLocatarioRepository() {
-        return locatarioRepository;
-    }
-
-    void criarlocatario (Locatario locatario){}
-    void editarlocatario (Locatario locatario){}
-    void removerlocatario (Locatario locatario){}
-    void listarLocatarios(){}
-    void listarLocatario(int id){}
-
+    void criarlocatario (Locatario locatario);
+    void editarlocatario (Locatario locatario);
+    void removerlocatario (Locatario locatario);
+    List<Locatario> listarLocatarios();
+    Locatario listarLocatario(int id);
 }

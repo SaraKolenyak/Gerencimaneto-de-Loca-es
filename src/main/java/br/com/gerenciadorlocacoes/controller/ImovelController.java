@@ -21,6 +21,7 @@ public class ImovelController {
     public void removerImovel(Imovel imovel){
         imovelService.removerImovel(imovel);
     }
+
     public List<Imovel> listarImoveis(){
         return imovelService.listarImoveis();
     }

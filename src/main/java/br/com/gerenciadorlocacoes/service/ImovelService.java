@@ -1,6 +1,6 @@
 package br.com.gerenciadorlocacoes.service;
-import java.util.List;
 
+import java.util.List;
 import br.com.gerenciadorlocacoes.domain.Imovel;
 
 public interface ImovelService {
